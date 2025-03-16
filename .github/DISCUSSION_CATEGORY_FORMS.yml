@@ -1,0 +1,174 @@
+# Paper Discussions
+paper_discussions:
+  name: 📚 Paper Discussions | 论文讨论
+  description: |
+    Discuss AI papers and their interpretations
+    讨论AI论文及其解读
+  labels: ["paper-discussion"]
+  format: markdown
+  body:
+    - type: markdown
+      attributes:
+        value: |
+          Start a discussion about an AI paper or its interpretation.
+          开始关于AI论文或其解读的讨论。
+          
+    - type: input
+      id: paper-title
+      attributes:
+        label: Paper Title | 论文标题
+        placeholder: e.g., Attention Is All You Need
+      validations:
+        required: true
+        
+    - type: dropdown
+      id: paper-category
+      attributes:
+        label: Paper Category | 论文分类
+        multiple: true
+        options:
+          - Featured - Foundational | 精选 - 奠基性工作
+          - Featured - Trending | 精选 - 热门论文
+          - Featured - Latest | 精选 - 最新解读
+          - Series - Foundation Models | 专题 - 基础模型
+          - Series - Agent Systems | 专题 - 智能体
+          - Series - Multimodal | 专题 - 多模态
+      validations:
+        required: true
+        
+    - type: textarea
+      id: discussion-topic
+      attributes:
+        label: Discussion Topic | 讨论主题
+        description: |
+          What aspects of the paper would you like to discuss?
+          您想讨论论文的哪些方面？
+        placeholder: |
+          e.g., The innovation points, implementation details, or potential applications...
+          例如：创新点、实现细节或潜在应用...
+      validations:
+        required: true
+
+# Ideas & Suggestions
+ideas:
+  name: 💡 Ideas & Suggestions | 想法和建议
+  description: |
+    Share your ideas for improving HuggingPaper
+    分享改进HuggingPaper的想法
+  labels: ["ideas"]
+  format: markdown
+  body:
+    - type: markdown
+      attributes:
+        value: |
+          Share your ideas or suggestions for improving HuggingPaper.
+          分享您对改进HuggingPaper的想法或建议。
+          
+    - type: dropdown
+      id: idea-type
+      attributes:
+        label: Idea Type | 想法类型
+        multiple: true
+        options:
+          - Content Organization | 内容组织
+          - Learning Experience | 学习体验
+          - Community Features | 社区功能
+          - Technical Improvements | 技术改进
+          - Others | 其他
+      validations:
+        required: true
+        
+    - type: textarea
+      id: idea-description
+      attributes:
+        label: Your Idea | 您的想法
+        description: |
+          Describe your idea in detail
+          详细描述您的想法
+        placeholder: |
+          I think we could improve... by...
+          我认为我们可以通过...来改进...
+      validations:
+        required: true
+
+# Q&A
+q_and_a:
+  name: 🙋 Q&A | 问答
+  description: |
+    Ask questions about papers, concepts, or the platform
+    询问关于论文、概念或平台的问题
+  labels: ["question"]
+  format: markdown
+  body:
+    - type: markdown
+      attributes:
+        value: |
+          Ask your questions about papers, concepts, or how to use HuggingPaper.
+          询问关于论文、概念或如何使用HuggingPaper的问题。
+          
+    - type: dropdown
+      id: question-type
+      attributes:
+        label: Question Type | 问题类型
+        options:
+          - Paper Understanding | 论文理解
+          - Technical Concept | 技术概念
+          - Platform Usage | 平台使用
+          - Others | 其他
+      validations:
+        required: true
+        
+    - type: textarea
+      id: question
+      attributes:
+        label: Your Question | 您的问题
+        description: |
+          What would you like to know?
+          您想了解什么？
+        placeholder: |
+          I'd like to understand...
+          我想了解...
+      validations:
+        required: true
+
+# Show and Tell
+show_and_tell:
+  name: 🎉 Show and Tell | 分享展示
+  description: |
+    Share your learning experiences and achievements
+    分享您的学习经验和成果
+  labels: ["showcase"]
+  format: markdown
+  body:
+    - type: markdown
+      attributes:
+        value: |
+          Share your learning journey, insights, or achievements with the community.
+          与社区分享您的学习历程、见解或成果。
+          
+    - type: dropdown
+      id: content-type
+      attributes:
+        label: Content Type | 内容类型
+        multiple: true
+        options:
+          - Learning Experience | 学习经验
+          - Paper Implementation | 论文实现
+          - Project Showcase | 项目展示
+          - Research Insights | 研究见解
+          - Others | 其他
+      validations:
+        required: true
+        
+    - type: textarea
+      id: content
+      attributes:
+        label: Your Story | 您的故事
+        description: |
+          Share your experience or achievement
+          分享您的经验或成果
+        placeholder: |
+          I'd like to share my experience of...
+          我想分享我...的经验
+      validations:
+        required: true
