@@ -23,8 +23,28 @@ repository:
   enable_automated_security_fixes: true
   enable_vulnerability_alerts: true
 
+  # Actions 权限设置
+  actions:
+    enabled: true
+    allowed_actions: "all"
+    local_only: false
+    required_reviews:
+      required_approving_review_count: 1
+    permissions:
+      contents: read
+      actions: write
+      checks: write
+      deployments: write
+      issues: write
+      packages: read
+      pages: write
+      pull_requests: write
+      repository_projects: write
+      security_events: write
+      statuses: write
+
   # 分支保护规则
-branches:
+  branches:
   - name: main
     protection:
       # 要求PR review
