@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# 暂时注释掉 sitemap，等网站部署后再启用
+# Sitemap: https://huggingpaper.com/sitemap.xml
+
+# Optimize crawling
+Crawl-delay: 10
+
+# Disallow admin and API routes
+Disallow: /admin/
+Disallow: /api/
+
+# Allow search engines to access static assets
+Allow: /static/
+Allow: /img/
+Allow: /assets/
