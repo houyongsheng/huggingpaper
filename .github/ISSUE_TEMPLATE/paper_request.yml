@@ -1,0 +1,68 @@
+name: 📚 Paper Interpretation Request | 论文解读请求
+description: Request interpretation of an AI paper | 请求解读一篇 AI 论文
+title: "[Paper Request]: "
+labels: ["paper-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting a paper interpretation request! Please provide the following information to help us better understand your needs.
+        感谢您提交论文解读请求！请提供以下信息，帮助我们更好地理解您的需求。
+        
+  - type: input
+    id: paper-title
+    attributes:
+      label: Paper Title | 论文标题
+      placeholder: e.g., Attention Is All You Need
+    validations:
+      required: true
+      
+  - type: input
+    id: paper-url
+    attributes:
+      label: Paper URL | 论文链接
+      placeholder: e.g., https://arxiv.org/abs/1706.03762
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: paper-field
+    attributes:
+      label: Research Field | 研究领域
+      multiple: true
+      options:
+        - Foundation Models | 基础模型
+        - Agent Systems | 智能体
+        - Multimodal | 多模态
+        - Computer Vision | 计算机视觉
+        - Natural Language Processing | 自然语言处理
+        - Reinforcement Learning | 强化学习
+        - Others | 其他
+    validations:
+      required: true
+      
+  - type: textarea
+    id: paper-importance
+    attributes:
+      label: Why is this paper worth interpreting? | 为什么这篇论文值得解读？
+      description: |
+        Please briefly explain the importance, innovation, or application value of this paper.
+        请简要说明这篇论文的重要性、创新点或应用价值。
+      placeholder: |
+        The importance of this paper lies in...
+        这篇论文的重要性在于...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information | 补充信息
+      description: |
+        Any other information you'd like to add (optional)
+        其他您想补充的信息（可选）
+      placeholder: |
+        e.g., specific parts you're interested in, content you'd like us to focus on
+        例如：您特别关注的论文部分、希望重点解读的内容等
+    validations:
+      required: false

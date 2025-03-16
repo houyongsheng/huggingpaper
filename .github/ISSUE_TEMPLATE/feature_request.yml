@@ -1,0 +1,83 @@
+name: 💡 Feature Request | 功能建议
+description: Suggest a new feature or improvement | 提出新功能或改进建议
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your feature suggestion! Please describe your idea to help us improve the product.
+        感谢您的功能建议！请描述您的想法，帮助我们更好地改进产品.
+        
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: Feature Type | 功能类型
+      multiple: true
+      options:
+        - Paper Interpretation | 论文解读
+        - Knowledge System | 知识体系
+        - Visualization | 可视化
+        - Search Function | 搜索功能
+        - Community Interaction | 社区互动
+        - User Experience | 用户体验
+        - Others | 其他
+    validations:
+      required: true
+      
+  - type: textarea
+    id: problem
+    attributes:
+      label: Related Problem | 相关问题
+      description: |
+        What problem does this feature solve?
+        这个功能是为了解决什么问题？
+      placeholder: |
+        Currently there is... and we need...
+        当前存在...问题，需要...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution | 建议的解决方案
+      description: |
+        What do you expect this feature to be like?
+        您期望这个功能是什么样的？
+      placeholder: |
+        Suggest adding... feature that can...
+        Specifically:
+        1. ...
+        2. ...
+        
+        建议添加...功能，可以...
+        具体可以包括：
+        1. ...
+        2. ...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions | 替代方案
+      description: |
+        What alternative solutions have you considered?
+        您考虑过哪些替代方案？
+      placeholder: |
+        It could also be solved by... but...
+        也可以通过...方式解决，但是...
+    validations:
+      required: false
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context | 补充信息
+      description: |
+        Any other information that helps us understand your suggestion (optional)
+        其他有助于我们理解您建议的信息（可选）
+      placeholder: |
+        e.g., reference examples, design sketches
+        例如：参考示例、设计草图等

@@ -1,0 +1,91 @@
+name: 🐛 Bug Report | Bug 报告
+description: Report a website functionality issue | 报告网站功能问题
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting an issue! This will help us improve the website.
+        感谢您报告问题！这将帮助我们改进网站。
+        
+  - type: dropdown
+    id: bug-type
+    attributes:
+      label: Issue Type | 问题类型
+      options:
+        - Website Functionality | 网站功能
+        - Content Display | 内容展示
+        - Search Function | 搜索功能
+        - Performance | 性能问题
+        - Others | 其他
+    validations:
+      required: true
+      
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Issue Description | 问题描述
+      description: |
+        Please describe the issue in detail
+        请详细描述您遇到的问题
+      placeholder: |
+        When I... the following issue occurred...
+        当我...时，出现了...的问题
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior | 预期行为
+      description: |
+        What did you expect to happen?
+        您认为应该是什么样的？
+      placeholder: |
+        I expected...
+        我期望...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce | 复现步骤
+      description: |
+        How can we reproduce this issue?
+        如何复现这个问题？
+      placeholder: |
+        1. Go to...
+        2. Click on...
+        3. Scroll down to...
+        4. See error
+        
+        1. 访问...
+        2. 点击...
+        3. 滚动到...
+        4. 出现错误
+    validations:
+      required: true
+      
+  - type: input
+    id: browser
+    attributes:
+      label: Browser Environment | 浏览器环境
+      description: |
+        Your browser and version
+        您使用的浏览器和版本
+      placeholder: e.g., Chrome 120.0.6099.109
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context | 补充信息
+      description: |
+        Any other information that might help us understand and fix the issue (optional)
+        其他有助于我们理解和解决问题的信息（可选）
+      placeholder: |
+        e.g., screenshots, error messages
+        例如：截图、错误信息等

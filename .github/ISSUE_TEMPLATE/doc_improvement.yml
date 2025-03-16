@@ -1,0 +1,80 @@
+name: 📝 Documentation Improvement | 文档改进
+description: Suggest content or documentation improvements | 提出内容或文档相关的改进建议
+title: "[Docs]: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us improve our documentation! Your feedback is important for content quality.
+        感谢您帮助我们改进文档！您的反馈对提升内容质量很重要。
+        
+  - type: dropdown
+    id: content-type
+    attributes:
+      label: Content Type | 内容类型
+      multiple: true
+      options:
+        - Paper Interpretation | 论文解读
+        - Concept Explanation | 概念讲解
+        - Technical Documentation | 技术文档
+        - User Guide | 使用指南
+        - Contributing Guide | 贡献指南
+        - Others | 其他
+    validations:
+      required: true
+      
+  - type: input
+    id: page-url
+    attributes:
+      label: Page URL | 页面链接
+      description: |
+        URL of the page that needs improvement (if applicable)
+        需要改进的页面链接（如果适用）
+      placeholder: https://huggingpaper.com/docs/...
+    validations:
+      required: false
+      
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content | 当前内容
+      description: |
+        What issues exist with the current content?
+        当前内容存在什么问题？
+      placeholder: |
+        The current content...
+        现在的内容...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Suggested Improvements | 改进建议
+      description: |
+        How do you suggest we improve it?
+        您建议如何改进？
+      placeholder: |
+        Suggestions:
+        1. Adjust... wording
+        2. Add... examples
+        3. Add... explanations
+        
+        建议：
+        1. 调整...的表述
+        2. 添加...的示例
+        3. 补充...的说明
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information | 补充信息
+      description: |
+        Any other relevant information (optional)
+        其他相关信息（可选）
+      placeholder: |
+        e.g., references, related links
+        例如：参考资料、相关链接等
