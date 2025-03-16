@@ -1,0 +1,80 @@
+repository:
+  # 仓库设置
+  name: huggingpaper
+  description: Open-source AI paper learning platform | 开源 AI 论文学习平台
+  homepage: https://huggingpaper.com
+  topics:
+    - ai
+    - machine-learning
+    - paper
+    - learning
+    - documentation
+    - community
+  private: false
+  has_issues: true
+  has_projects: true
+  has_wiki: false
+  has_downloads: true
+  default_branch: main
+  allow_squash_merge: true
+  allow_merge_commit: true
+  allow_rebase_merge: true
+  delete_branch_on_merge: true
+  enable_automated_security_fixes: true
+  enable_vulnerability_alerts: true
+
+  # 分支保护规则
+branches:
+  - name: main
+    protection:
+      # 要求PR review
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+        dismiss_stale_reviews: true
+        require_code_owner_reviews: true
+        dismissal_restrictions:
+          users: []
+          teams: []
+      
+      # 要求状态检查通过
+      required_status_checks:
+        strict: true
+        contexts:
+          - "build"
+          - "test"
+          - "lint"
+      
+      # 强制线性历史
+      required_linear_history: true
+      
+      # 包含管理员
+      enforce_admins: true
+      
+      # 限制推送权限
+      restrictions:
+        users: []
+        teams: []
+        apps: []
+
+  # 开发分支保护
+  - name: develop
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+        dismiss_stale_reviews: true
+      required_status_checks:
+        strict: true
+        contexts:
+          - "build"
+          - "test"
+          - "lint"
+      restrictions: null
+
+# 团队设置
+teams:
+  - name: maintainers
+    permission: maintain
+  - name: developers
+    permission: push
+  - name: contributors
+    permission: pull

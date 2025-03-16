@@ -1,0 +1,18 @@
+# Global owners
+* @houyongsheng
+
+# Documentation owners
+/docs/ @houyongsheng
+/docs/papers/ @houyongsheng
+/docs/concepts/ @houyongsheng
+
+# Source code owners
+/src/ @houyongsheng
+/src/components/ @houyongsheng
+
+# Configuration owners
+/config/ @houyongsheng
+*.config.* @houyongsheng
+
+# GitHub settings
+/.github/ @houyongsheng
