@@ -18,3 +18,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Internal Documents
+产品文档.md
+技术文档.md
+任务拆解.md
+市场文档.md
